@@ -4,5 +4,6 @@
 # include <signal.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "libft/libft.h"
 
 #endif
