@@ -23,10 +23,12 @@ void	handler(int signum, siginfo_t *siginfo, void *room)
 		ft_putchar_fd(char_value, 0);
 		current_bit = 0;
 		char_value = 0;
+		usleep(100);
 		kill(siginfo->si_pid, SIGUSR2);
 		return ;
 	}
 	current_bit++;
+	usleep(100);
 	kill(siginfo->si_pid, SIGUSR2);
 }
 

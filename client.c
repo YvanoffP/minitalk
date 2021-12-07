@@ -10,12 +10,12 @@ void	send_char_by_bit(char c, int pid)
 		if (c & 0x01)
 		{
 			kill(pid, SIGUSR2);
-			usleep(100);
+			pause();
 		}
 		else
 		{
 			kill(pid, SIGUSR1);
-			usleep(100);
+			pause();
 		}
 		c = c >> 1;
 		usleep(100);
@@ -24,7 +24,6 @@ void	send_char_by_bit(char c, int pid)
 
 void	handler_client(int signal)
 {
-	printf("coou");
 	write(1, "ok", 2);
 	(void)signal;
 }
