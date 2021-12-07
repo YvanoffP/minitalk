@@ -52,9 +52,9 @@ FCLEANED	=	echo "\n🧼 $(BOLD_YELLOW)Fclean: $(NO_COLOR)Removed the executables
 
 #--------RULES-------
 
-all: $(NAME)
+all: 		$(NAME)
 
-$(NAME):	 comp_start server client
+$(NAME):	comp_start server client
 
 comp_start:
 			@$(COMP_START)
