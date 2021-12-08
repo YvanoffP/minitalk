@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ypetruzz <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/08 19:17:48 by ypetruzz          #+#    #+#             */
+/*   Updated: 2021/12/08 19:18:48 by ypetruzz         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
-int     calcul_power(int nb, int power)
+int	calcul_power(int nb, int power)
 {
 	if (power < 0)
 		return (0);
@@ -34,7 +46,7 @@ void	handler(int signum, siginfo_t *siginfo, void *room)
 
 int	main(void)
 {
-	int	pid;
+	int					pid;
 	struct sigaction	sa;
 
 	sa.sa_sigaction = &handler;
